@@ -2,7 +2,14 @@ use strict;
 use diagnostics; 
 use warnings; 
 
-my $filename = 'variables.txt';
-open(FH, '<', $filename) or die $!;
-print("File $filename opened successfully!\n");
-close(FH);
+# open the file
+my $file = "variables.txt";
+open(my $fh, "<", $file) or die "Unable to open < $file: $!";
+my @lines = <$fh>;
+chomp(@lines);
+print @lines;
+#prints each line separately
+foreach (@lines)
+{
+    print("$_\n");
+}
