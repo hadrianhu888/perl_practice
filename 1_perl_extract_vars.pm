@@ -1,4 +1,4 @@
-# package 1_perl_extract_vars;
+package 1_perl_extract_vars;
 use strict;
 use diagnostics; 
 use warnings; 
