@@ -1,17 +1,17 @@
-# package 2_perl_extract_dev_names;
 use strict;
 use diagnostics; 
 use warnings; 
-# use 1_perl_extract_vars;
-# system "1_perl_extract_vars.pl";
 
 # open the file
+
 my $file = "variables.txt";
 open(my $fh, "<", $file) or die "Unable to open < $file: $!";
 my @v_vars = <$fh>;
 chomp(@v_vars);
+
 # print @v_vars;
 #prints each line separately
+
 foreach (@v_vars)
 {
     print("$_\n");
@@ -25,17 +25,31 @@ foreach(@v_vars)
     print("$_\t". length($_) ."\n");
 }
 
+my @var_string_length = (); 
+foreach(@v_vars)
+{
+    push(@v_vars, length($_));
+}
 
+print("\n\nString length of each particular v variable:\n\n")
+
+foreach(@var_string_length)
+{
+    print("$_\n\n");
+}
 
 print("\nVariables Names and Variable Names and Device Names\n\n");
 
 # open the file
+
 my $file1 = "variables.dat";
 open(my $fh1, "<", $file1) or die "Unable to open < $file1: $!";
 my @v_vars_dev= <$fh1>;
 chomp(@v_vars_dev);
+
 # print @v_vars_dev;
 #prints each line separately
+
 foreach (@v_vars_dev)
 {
     print("$_\t\t". length($_) ."\n");
