@@ -25,6 +25,8 @@ foreach(@v_vars)
     print("$_\t". length($_) ."\n");
 }
 
+
+
 print("\nVariables Names and Variable Names and Device Names\n\n");
 
 # open the file
