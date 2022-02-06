@@ -1,3 +1,4 @@
-use strict;
-# use diagnostics;
-# use warnings;
+$hashref = {
+#     'Adam' => 'Eve', 
+#     'Clyde' => 'Bonnie',
+# }

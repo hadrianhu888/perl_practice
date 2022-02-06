@@ -1,29 +1,28 @@
-# use strict;
-# use diagnostics;
-# use warnings;
+use strict;
+use diagnostics;
+use warnings;
 
-# $arrayref = [1,2,['a','b', 'c']]; 
 
-$hashref = {
-    'Adam' => 'Eve', 
-    'Clyde' => 'Bonnie',
-}
+# $hashref = {
+#     'Adam' => 'Eve', 
+#     'Clyde' => 'Bonnie',
+# 
 
-$var = 10;
+my $var = 10;
 
 # Now $r has reference to $var scalar.
-$r = \$var;
+my $r = \$var;
 
 # Print value available at the location stored in $r.
 print "Value of $var is : ", $$r, "\n";
 
-@var = (1, 2, 3);
+my @var = (1, 2, 3);
 # Now $r has reference to @var array.
 $r = \@var;
 # Print values available at the location stored in $r.
 print "Value of @var is : ",  @$r, "\n";
 
-%var = ('key1' => 10, 'key2' => 20);
+my %var = ('key1' => 10, 'key2' => 20);
 # Now $r has reference to %var hash.
 $r = \%var;
 # Print values available at the location stored in $r.
